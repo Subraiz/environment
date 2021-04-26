@@ -8,6 +8,15 @@ const Home = () => {
   return (
     <div>
       <Header />
+      <div className={styles.container}>
+        <div className={styles.postsContainer}>
+          <div className={styles.newPostContainer}>
+            <p>Start A New Post!</p>
+            <button>Post</button>
+          </div>
+        </div>
+        <div className={styles.booksContainer}></div>
+      </div>
     </div>
   );
 };
