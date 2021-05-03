@@ -72,9 +72,8 @@
 }
 
 .books1 img {
-  max-width: 200px;
-  min-height: 300px;
-  width: 100%;
+  max-width: 45%;
+  max-height: 300px;
 }
 
 .books2 {
@@ -83,7 +82,7 @@
 }
 
 .books2 {
-  min-width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
 }
