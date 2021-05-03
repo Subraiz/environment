@@ -50,13 +50,7 @@ const Profile = ({ store }) => {
             Chestnut Hill, MA
             <br />
             <br />
-            <em>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              pellentesque volutpat erat et volutpat. Nullam non odio a tellus
-              tempus ultrices. Vivamus sagittis malesuada turpis, ut maximus
-              tortor aliquet a. Etiam consectetur dolor eu dolor fermentum, eu
-              tincidunt tortor vulputate. Sed non massa lectus.
-            </em>
+            <em>{user.bio}</em>
           </p>
         </div>
         <div class="col-8">{renderNews()}</div>

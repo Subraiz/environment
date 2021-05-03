@@ -5,13 +5,15 @@
       "id": "namwookkim",
       "email": "nam.wook.kim@bc.edu",
       "photo": "https://www.bc.edu/content/bc-web/schools/mcas/departments/computer-science/people/faculty-directory/kim-nam-wook/_jcr_content/profileImage.img.png",
-      "name": "Nam Wook Kim"
+      "name": "Nam Wook Kim",
+      "bio": "Nam Wook Kim is an Assistant Professor of Computer Science at Boston College. His research vision is to lower barriers for everyone to understand and communicate complex data. He tackles this challenge by studying visualization within the broad context of human-computer interaction. His research investigates innovative approaches to interact with data, going beyond traditional expert systems and addressing the needs of a broader audience, including designers, journalists, and casual users. His work has been recognized with awards from ACM CHI, ACM UIST, and Kantar Information is Beautiful Awards."
     },
     {
       "id": "ilovecorgis732",
       "email": "corgis@bc.edu",
       "photo": "",
-      "name": "Ms. Corgi"
+      "name": "Ms. Corgi",
+      "bio": ""
     }
   ],
   "followers": [
