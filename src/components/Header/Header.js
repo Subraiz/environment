@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
-const Header = ({ searchTerm, setSearchTerm, store }) => {
+const Header = ({ searchTerm, setSearchTerm, store, profile }) => {
   const user = store.users.filter((obj) => {
     return obj.id === store.currentUserId;
   })[0];
@@ -25,14 +25,17 @@ const Header = ({ searchTerm, setSearchTerm, store }) => {
           <p>Events</p>
         </Link>
       </div>
-      <div className={styles.searchContainer}>
-        <input
-          placeholder="Search for..."
-          className={styles.searchBar}
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
+      {!profile ? (
+        <div className={styles.searchContainer}>
+          <input
+            placeholder="Search for..."
+            className={styles.searchBar}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+      ) : null}
+
       <Link to="/profile" style={{ textDecoration: "none" }}>
         <div className={styles.profileContainer}>
           <p>Hi {user.name}</p>

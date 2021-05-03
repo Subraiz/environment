@@ -35,7 +35,7 @@ const Profile = ({ store }) => {
 
   return (
     <div>
-      <Header store={store} />
+      <Header store={store} profile={true} />
       <div class="row">
         <div class="col-8">
           <img class="profilepic" src={user.photo} />
