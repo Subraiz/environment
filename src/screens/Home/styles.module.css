@@ -11,7 +11,10 @@
 }
 
 .booksContainer {
-  width: 30%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .newPostContainer {
@@ -60,4 +63,27 @@
   bottom: 0;
   right: 0;
   color: #c7c7c7;
+}
+
+.books1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.books1 img {
+  max-width: 200px;
+  min-height: 300px;
+  width: 100%;
+}
+
+.books2 {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.books2 {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
 }

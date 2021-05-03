@@ -45,7 +45,25 @@ const Home = ({ store }) => {
           </div>
           <div className={styles.posts}>{renderPosts()}</div>
         </div>
-        <div className={styles.booksContainer}></div>
+        <div className={styles.booksContainer}>
+          <h3>Trending Books</h3>
+          <div className={styles.books1}>
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/91dcQ3Hd84L.jpg"
+              alt="book-1"
+            ></img>
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/81nY3giC9NL.jpg"
+              alt="book-2"
+            ></img>
+          </div>
+          <div className={styles.books2}>
+            <img
+              src="https://images.penguinrandomhouse.com/cover/9781632173409"
+              alt="book-3"
+            ></img>
+          </div>
+        </div>
       </div>
     </div>
   );
