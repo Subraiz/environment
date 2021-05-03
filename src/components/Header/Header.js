@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useReducer } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
-const Header = () => {
+const Header = ({ searchTerm, setSearchTerm, store }) => {
+  const user = store.users.filter((obj) => {
+    return obj.id === store.currentUserId;
+  })[0];
+
+  console.log(user);
   return (
     <div className={styles.headerContainer}>
       <div className={styles.navContainer}>
@@ -21,16 +26,18 @@ const Header = () => {
         </Link>
       </div>
       <div className={styles.searchContainer}>
-        <input placeholder="Search for..." className={styles.searchBar} />
+        <input
+          placeholder="Search for..."
+          className={styles.searchBar}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
       <Link to="/profile" style={{ textDecoration: "none" }}>
         <div className={styles.profileContainer}>
-          <p>Hi Nam!</p>
+          <p>Hi {user.name}</p>
           <div className={styles.avatarContainer}>
-            <img
-              src="https://www.bc.edu/content/bc-web/schools/mcas/departments/computer-science/people/faculty-directory/kim-nam-wook/_jcr_content/profileImage.img.png"
-              alt="pfp"
-            />
+            <img src={user.photo} alt="pfp" />
           </div>
         </div>
       </Link>

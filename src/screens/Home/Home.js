@@ -1,30 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { Header } from "../../components";
-import Store from "../../store.json";
 
-const Home = () => {
+const Home = ({ store }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
   const renderPosts = () => {
-    return Store.posts.map((post, i) => {
+    return store.posts.map((post, i) => {
       const { photo, desc, shortContent, userId, id } = post;
-      return (
-        <Link key={i} to={`/post/${id}`} style={{ color: "black" }}>
-          <div className={styles.post}>
-            <img src={photo} alt="desc-tag" />
-            <div className={styles.postInfo}>
-              <h2>{desc}</h2>
-              <p>{shortContent}</p>
+      if (desc.toLowerCase().includes(searchTerm.toLowerCase())) {
+        return (
+          <Link key={i} to={`/post/${id}`} style={{ color: "black" }}>
+            <div className={styles.post}>
+              <img src={photo} alt="desc-tag" />
+              <div className={styles.postInfo}>
+                <h2>{desc}</h2>
+                <p>{shortContent}</p>
+              </div>
+              <p className={styles.userId}>Created by {userId}</p>
             </div>
-            <p className={styles.userId}>Created by {userId}</p>
-          </div>
-        </Link>
-      );
+          </Link>
+        );
+      }
     });
   };
+
   return (
     <div>
-      <Header />
+      <Header
+        store={store}
+        searchTerm={searchTerm}
+        setSearchTerm={(text) => setSearchTerm(text)}
+      />
       <div className={styles.container}>
         <div className={styles.postsContainer}>
           <div className={styles.newPostContainer}>

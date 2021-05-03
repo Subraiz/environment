@@ -90,6 +90,11 @@ a:active {
   /*padding: 1% 10% 10% 10%;*/
 }
 
+.news-container {
+  width: 95vw;
+  margin: 0 auto;
+}
+
 [class*="col-"] {
   float: left;
   padding: 15px;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Landing, Questions, Home, Profile, Events, News } from "./screens";
+import Store from "./store.json";
 
 function App() {
   return (
@@ -8,16 +9,16 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/news">
-            <News />
+            <News store={Store} />
           </Route>
           <Route path="/events">
-            <Events />
+            <Events store={Store} />
           </Route>
           <Route path="/profile">
-            <Profile />
+            <Profile store={Store} />
           </Route>
           <Route path="/home">
-            <Home />
+            <Home store={Store} />
           </Route>
           <Route path="/questions">
             <Questions />

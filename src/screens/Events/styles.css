@@ -21,6 +21,12 @@ nav {
   float: right;
 }
 
+.events-container {
+  width: 95vw;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
 nav img {
   height: 90%;
 }
@@ -41,6 +47,10 @@ a:link {
 a:visited {
   color: #0097a7;
   text-decoration: none;
+}
+
+.btn {
+  margin-top: 10px;
 }
 
 a:hover {
