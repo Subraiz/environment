@@ -7,7 +7,6 @@ const Header = ({ searchTerm, setSearchTerm, store, profile }) => {
     return obj.id === store.currentUserId;
   })[0];
 
-  console.log(user);
   return (
     <div className={styles.headerContainer}>
       <div className={styles.navContainer}>

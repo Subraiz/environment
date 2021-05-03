@@ -7,3 +7,4 @@ export * from "./Post/Post";
 export * from "./Profile/Profile";
 export * from "./Signup/Signup";
 export * from "./Questions/Questions";
+export * from "./Create/Create";
